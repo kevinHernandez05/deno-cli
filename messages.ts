@@ -6,7 +6,6 @@ export class messages{
     
     public static NewMsg():void {
         console.log(ink.colorize("<b>deno-cli -- new.</b>"));
-        console.log(ink.colorize("<b>Cloning Antares' Deno Boilerplate...</b>"));
         repository.AntaresCloning();
     }
     

@@ -1,0 +1,25 @@
+
+    [
+       {
+           "isFile" : "yes",
+           "nestedFiles": "no",
+           "name" : "javascriptfile",
+           "extension" : "ts",
+           "content": "console.log('hello world');"
+
+       },
+       {
+        "isFile" : "no",
+        "nestedFiles": 
+            {
+                "isFile" : "yes",
+                "nestedFiles": "no",
+                "name" : "example",
+                "extension" : "ts",
+                "content": ""
+            },
+        "name" : "folder",
+        "extension" : "no",
+        "content": "no"
+    }
+    ]
