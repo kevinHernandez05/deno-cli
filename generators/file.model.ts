@@ -1,8 +1,9 @@
 export interface IFile{
+    id: number;
     isFile: string;
-    nestedFiles: string| IFile[];
+    nestedFiles: IFile[];
     name: string;
-    extension: string|boolean;
+    extension: string;
     content: string;
 }
 

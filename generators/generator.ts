@@ -1,6 +1,5 @@
 import { ensureDir, exists } from "https://deno.land/std/fs/mod.ts";
 import { readJson } from 'https://deno.land/x/jsonfile/mod.ts';
-
 import { IFile } from "./file.model.ts";
 
 export class generator{
@@ -34,36 +33,46 @@ export class generator{
         }      
 
         //Mapping and create files from object to file
-        const files: IFile[] = project as IFile[];
+        let temp: string = JSON.stringify(project);
+        let files: IFile[] = JSON.parse(temp);
         
-        files.forEach(file => {
-       
-            //if is folder, create it
-            if(file.isFile === "yes"){
-                let write = Deno.writeTextFile("./" + name + "/" + file.name + "." + file.extension, file.content);
-                write.then(()=> console.log("Creating file: " + file.name + "." + file.extension));
-            }
+        for (let index = 0; index < files.length; index++) {
 
-            else{
-                ensureDir("./"+ name + "/" + file.name);
-                console.log("Creating directory: " + file.name);
+            //if is file, create it!
+            if(files[index].isFile === "yes"){
+                await Deno.writeTextFile("./" + name + "/" + files[index].name + "." +  files[index].extension,  files[index].content)
+                .then(()=> console.log("Creating file: " +  files[index].name + "." +  files[index].extension));
+            }    
+            else if (files[index].isFile === "no"){
+                await ensureDir("./"+ name + "/" + files[index].name);
+                await console.log("Creating directory: " + files[index].name);
 
-                //TODO: create nested files
                 //has nested files? iterate them!
-                if(typeof(file.nestedFiles) !== 'string'){
-                   Array.from(file.nestedFiles).forEach(nestedFile =>{
-                        //and after that create them!
-                        let write = Deno.writeTextFile("./" + name + "/" + file.name + "/"+ nestedFile.name + "." + nestedFile.extension, nestedFile.content);
-                        write.then(()=> console.log("Creating file: " + nestedFile.name + "." + nestedFile.extension));
-                    });
+                try {
+                 
+                    if(files[index].nestedFiles !== undefined){
+                        for (let subindex = 0; subindex < files[index].nestedFiles.length; subindex++) {
+                            
+                            
+                            await Deno.writeTextFile("./" + name + "/" + files[index].name + "/" + files[index].nestedFiles[subindex].name + "." + files[index].nestedFiles[subindex].extension, files[index].nestedFiles[subindex].content)
+                            .then(()=> console.log("Creating file: " + "/" + files[index].name + "/" + files[index].nestedFiles[subindex].name + "." + files[index].nestedFiles[subindex].extension));
+     
+                        }
+                    }
+                
+                } catch (error) {
+                    console.log("Error 004: there's invalid characters on the files.json of the generator, review it and try again.");
                 }
-            }
-           
-
-        });
+            }        
+        }
 
         //happy coding and return true. :D
         return true;
+    }
+
+    public static async deleteDirectory(){
+        await Deno.remove('new-proj', { recursive: true });
+
     }
 
 }
