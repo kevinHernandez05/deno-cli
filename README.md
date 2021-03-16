@@ -1,17 +1,18 @@
 # deno-cli
-## Un CLI para generar proyectos basados en Deno
+### Un CLI para generar proyectos basados en Deno
 
 <p align="center">
     <img  src="https://deno.land/images/deno_logo_4.gif"  alt="logo" />
 </p>
 Este es un CLI pensado para generar proyectos con las mejores prácticas de desarrollo en la actualidad con pocas líneas de comando en tu terminal.
 
-### Boilerplates disponibles
+## Boilerplates disponibles
 
-[x] Modelo básico
+- [x] Modelo básico
+
     ✔️ Model, Controller, Service y Helpers.
 
-[x] Deno REST 
+- [x] Deno REST 
 
     ✔️ Model, Controller, Service y Helpers.
     
