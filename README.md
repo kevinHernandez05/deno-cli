@@ -12,7 +12,7 @@ Este es un CLI pensado para generar proyectos con las mejores prácticas de desa
 
     ✔️ Model, Controller, Service y Helpers.
 
-- [x] Deno REST 
+- [x] Deno REST - By 1antares1; Repositorio git: <a href="https://github.com/ionic-dominicana/deno-dominicana">Click aquí</a>
 
     ✔️ Model, Controller, Service y Helpers.
     
