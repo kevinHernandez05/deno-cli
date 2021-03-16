@@ -13,6 +13,7 @@ export class repository{
     public static AntaresCloning(): void{
 
         generator.generateProject("new-proj");
+        console.log("Project cloned, Happy coding! 🥳");
 
     }
 }

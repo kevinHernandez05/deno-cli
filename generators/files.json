@@ -1,37 +1,364 @@
 [
     {
-        "isFile" : "yes",
-        "nestedFiles": [],
-        "name" : "javascriptfile",
-        "extension" : "ts",
-        "content": "console.log('hello world');"
-
-    },
-    {
         "isFile" : "no",
         "nestedFiles": [
             {
-            "isFile" : "yes",
-            "nestedFiles": [],
-            "name" : "example1",
-            "extension" : "ts",
-            "content": "console.log('hello, person 1')"
-            },
-            {
-            "isFile" : "yes",
-            "nestedFiles": [],
-            "name" : "example2",
-            "extension" : "ts",
-            "content": "console.log('hello, person 2')"
-        },{
-            "isFile" : "yes",
-            "nestedFiles": [],
-            "name" : "example3",
-            "extension" : "ts",
-            "content": "console.log('hello, person 2')"
-        }],
-        "name" : "example-container",
+                "isFile" : "yes",
+                "nestedFiles": [],
+                "name" : ".env",
+                "extension" : "example",
+                "content": "APP_NAME=Deno REST - Boilerplate for deno RESTful apis\nJWT_SECRET=SOME_AWSOME_JWT_SECRET\nJWT_ACCESS_TOKEN_EXP=3600\nJWT_REFRESH_TOKEN_EXP=1800\nKEY=YOUR_AES_KEY_FOR_PASSWORD_ENCRYPTION\nSALT=random_16byte_iv\nSEED=false\nIP=0.0.0.0\nHOST=localhost\nPORT=9000\nPROTOCOL=http\nDB_HOST=127.0.0.1:27017\nDB_NAME=deno_rest\nCLIENT_PROTOCOL=http\nCLIENT_HOST=localhost\nclientPort=3000\nDB_USER=LEAVE_BLANK_IF_NO_USER\nDB_PASS=\n"
+            }
+        ],
+        "name" : ".env",
         "extension" : "no",
         "content": "no"
+    },{
+        "isFile" : "no",
+        "nestedFiles": [
+            {
+                "isFile" : "yes",
+                "nestedFiles": [],
+                "name" : "config",
+                "extension" : "ts",
+                "content": ""
+            },
+            {
+                "isFile" : "yes",
+                "nestedFiles": [],
+                "name" : "roles",
+                "extension" : "ts",
+                "content": "console.log('roles, created')"
+            }
+        ],
+        "name" : "config",
+        "extension" : "no",
+        "content": "no"
+    },{
+        "isFile" : "no",
+        "nestedFiles": [
+            {
+                "isFile" : "yes",
+                "nestedFiles": [],
+                "name" : "auth.controller",
+                "extension" : "ts",
+                "content": "console.log('hello, world');"
+            },{
+                "isFile" : "yes",
+                "nestedFiles": [],
+                "name" : "user.controller",
+                "extension" : "ts",
+                "content": "console.log('hello, world');"
+            }
+        ],
+        "name" : "controllers",
+        "extension" : "no",
+        "content": "no"
+    },{
+        "isFile" : "no",
+        "nestedFiles": [
+            {
+                "isFile" : "yes",
+                "nestedFiles": [],
+                "name" : "users",
+                "extension" : "json",
+                "content": ""
+            }
+        ],
+        "name" : "data",
+        "extension" : "no",
+        "content": "no"
+    },{
+        "isFile" : "no",
+        "nestedFiles": [
+            {
+                "isFile" : "yes",
+                "nestedFiles": [],
+                "name" : "db",
+                "extension" : "ts",
+                "content": "console.log('hello, world');"
+            }
+        ],
+        "name" : "db",
+        "extension" : "no",
+        "content": "no"
+    },{
+        "isFile" : "no",
+        "nestedFiles": [
+            {
+                "isFile" : "yes",
+                "nestedFiles": [],
+                "name" : "hash.helper",
+                "extension" : "ts",
+                "content": "console.log('hello, world');"
+            },{
+                "isFile" : "yes",
+                "nestedFiles": [],
+                "name" : "jwt.helper",
+                "extension" : "ts",
+                "content": "console.log('hello, world');"
+            }
+        ],
+        "name" : "helpers",
+        "extension" : "no",
+        "content": "no"
+    },{
+        "isFile" : "no",
+        "nestedFiles": [
+            {
+                "isFile" : "yes",
+                "nestedFiles": [],
+                "name" : "auth.middleware",
+                "extension" : "ts",
+                "content": "console.log('hello, world');"
+            },{
+                "isFile" : "yes",
+                "nestedFiles": [],
+                "name" : "errorHandler.middleware",
+                "extension" : "ts",
+                "content": "console.log('hello, world');"
+            },{
+                "isFile" : "yes",
+                "nestedFiles": [],
+                "name" : "logger.middleware",
+                "extension" : "ts",
+                "content": "console.log('hello, world');"
+            },{
+                "isFile" : "yes",
+                "nestedFiles": [],
+                "name" : "validate.middleware",
+                "extension" : "ts",
+                "content": "console.log('hello, world');"
+            }
+        ],
+        "name" : "middlewares",
+        "extension" : "no",
+        "content": "no"
+    },{
+        "isFile" : "no",
+        "nestedFiles": [
+            {
+                "isFile" : "yes",
+                "nestedFiles": [],
+                "name" : "token.model",
+                "extension" : "ts",
+                "content": "console.log('hello, world');"
+            },{
+                "isFile" : "yes",
+                "nestedFiles": [],
+                "name" : "user_history.model",
+                "extension" : "ts",
+                "content": "console.log('hello, world');"
+            },{
+                "isFile" : "yes",
+                "nestedFiles": [],
+                "name" : "user.model",
+                "extension" : "ts",
+                "content": "console.log('hello, world');"
+            }
+        ],
+        "name" : "models",
+        "extension" : "no",
+        "content": "no"
+    },{
+        "isFile" : "no",
+        "nestedFiles": [
+            {
+                "isFile" : "yes",
+                "nestedFiles": [],
+                "name" : "auth.router",
+                "extension" : "ts",
+                "content": "console.log('hello, world');"
+            },{
+                "isFile" : "yes",
+                "nestedFiles": [],
+                "name" : "default.router",
+                "extension" : "ts",
+                "content": "console.log('hello, world');"
+            },{
+                "isFile" : "yes",
+                "nestedFiles": [],
+                "name" : "user.router",
+                "extension" : "ts",
+                "content": "console.log('hello, world');"
+            },{
+                "isFile" : "yes",
+                "nestedFiles": [],
+                "name" : "index",
+                "extension" : "ts",
+                "content": "console.log('hello, world');"
+            }
+        ],
+        "name" : "routers",
+        "extension" : "no",
+        "content": "no"
+    },{
+        "isFile" : "no",
+        "nestedFiles": [
+            {
+                "isFile" : "yes",
+                "nestedFiles": [],
+                "name" : "auth.service",
+                "extension" : "ts",
+                "content": "console.log('hello, world');"
+            },{
+                "isFile" : "yes",
+                "nestedFiles": [],
+                "name" : "token.service",
+                "extension" : "ts",
+                "content": "console.log('hello, world');"
+            },{
+                "isFile" : "yes",
+                "nestedFiles": [],
+                "name" : "user.service",
+                "extension" : "ts",
+                "content": "console.log('hello, world');"
+            }
+        ],
+        "name" : "services",
+        "extension" : "no",
+        "content": "no"
+    },{
+        "isFile" : "no",
+        "nestedFiles": [
+            {
+                "isFile" : "yes",
+                "nestedFiles": [],
+                "name" : "types.interface",
+                "extension" : "ts",
+                "content": "console.log('hello, world');"
+            }
+        ],
+        "name" : "types",
+        "extension" : "no",
+        "content": "no"
+    },{
+        "isFile" : "no",
+        "nestedFiles": [
+            {
+                "isFile" : "yes",
+                "nestedFiles": [],
+                "name" : "auth.validation",
+                "extension" : "ts",
+                "content": "console.log('hello, world');"
+            },{
+                "isFile" : "yes",
+                "nestedFiles": [],
+                "name" : "user.validation",
+                "extension" : "ts",
+                "content": "console.log('hello, world');"
+            }
+        ],
+        "name" : "validations",
+        "extension" : "no",
+        "content": "no"
+    },{
+        "isFile" : "yes",
+        "nestedFiles": [],
+        "name" : "",
+        "extension" : "dockerignore",
+        "content": ""
+    },{
+        "isFile" : "yes",
+        "nestedFiles": [],
+        "name" : "",
+        "extension" : "editorconfig",
+        "content": ""
+    },{
+        "isFile" : "yes",
+        "nestedFiles": [],
+        "name" : "",
+        "extension" : "firebaserc",
+        "content": ""
+    },{
+        "isFile" : "yes",
+        "nestedFiles": [],
+        "name" : "",
+        "extension" : "eslintrc",
+        "content": ""
+    },{
+        "isFile" : "yes",
+        "nestedFiles": [],
+        "name" : "",
+        "extension" : "gitignore",
+        "content": ""
+    },{
+        "isFile" : "yes",
+        "nestedFiles": [],
+        "name" : "",
+        "extension" : "prettierignore",
+        "content": ""
+    },{
+        "isFile" : "yes",
+        "nestedFiles": [],
+        "name" : "",
+        "extension" : "prettierrc",
+        "content": ""
+    },{
+        "isFile" : "yes",
+        "nestedFiles": [],
+        "name" : "app",
+        "extension" : "ts",
+        "content": ""
+    },{
+        "isFile" : "yes",
+        "nestedFiles": [],
+        "name" : "denon",
+        "extension" : "json",
+        "content": ""
+    },{
+        "isFile" : "yes",
+        "nestedFiles": [],
+        "name" : "deps",
+        "extension" : "ts",
+        "content": ""
+    },{
+        "isFile" : "yes",
+        "nestedFiles": [],
+        "name" : "",
+        "extension" : "dockerfile",
+        "content": ""
+    },{
+        "isFile" : "yes",
+        "nestedFiles": [],
+        "name" : "",
+        "extension" : "LICENSE",
+        "content": ""
+    },{
+        "isFile" : "yes",
+        "nestedFiles": [],
+        "name" : "lock_update",
+        "extension" : "sh",
+        "content": ""
+    },{
+        "isFile" : "yes",
+        "nestedFiles": [],
+        "name" : "lock",
+        "extension" : "json",
+        "content": ""
+    },{
+        "isFile" : "yes",
+        "nestedFiles": [],
+        "name" : "README",
+        "extension" : "md",
+        "content": ""
+    },{
+        "isFile" : "yes",
+        "nestedFiles": [],
+        "name" : "reload_deps",
+        "extension" : "sh",
+        "content": ""
+    },{
+        "isFile" : "yes",
+        "nestedFiles": [],
+        "name" : "seed",
+        "extension" : "ts",
+        "content": ""
+    },{
+        "isFile" : "yes",
+        "nestedFiles": [],
+        "name" : "tsconfig.json",
+        "extension" : "ts",
+        "content": ""
     }
 ]

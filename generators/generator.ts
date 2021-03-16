@@ -28,7 +28,7 @@ export class generator{
             project = await readJson('./generators/files.json');
 
         } catch (error) {
-            console.log("Make sure files.json is on the generators' directory.");
+            console.log("There was an error reading/parsing your \"files.json\", review it and try again.");
             return false;
         }      
 
@@ -52,11 +52,8 @@ export class generator{
                  
                     if(files[index].nestedFiles !== undefined){
                         for (let subindex = 0; subindex < files[index].nestedFiles.length; subindex++) {
-                            
-                            
                             await Deno.writeTextFile("./" + name + "/" + files[index].name + "/" + files[index].nestedFiles[subindex].name + "." + files[index].nestedFiles[subindex].extension, files[index].nestedFiles[subindex].content)
                             .then(()=> console.log("Creating file: " + "/" + files[index].name + "/" + files[index].nestedFiles[subindex].name + "." + files[index].nestedFiles[subindex].extension));
-     
                         }
                     }
                 

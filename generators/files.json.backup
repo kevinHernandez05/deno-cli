@@ -1,0 +1,37 @@
+[
+    {
+        "isFile" : "yes",
+        "nestedFiles": [],
+        "name" : "javascriptfile",
+        "extension" : "ts",
+        "content": "console.log('hello world');"
+
+    },
+    {
+        "isFile" : "no",
+        "nestedFiles": [
+            {
+            "isFile" : "yes",
+            "nestedFiles": [],
+            "name" : "example1",
+            "extension" : "ts",
+            "content": "console.log('hello, person 1')"
+            },
+            {
+            "isFile" : "yes",
+            "nestedFiles": [],
+            "name" : "example2",
+            "extension" : "ts",
+            "content": "console.log('hello, person 2')"
+        },{
+            "isFile" : "yes",
+            "nestedFiles": [],
+            "name" : "example3",
+            "extension" : "ts",
+            "content": "console.log('hello, person 2')"
+        }],
+        "name" : "example-container",
+        "extension" : "no",
+        "content": "no"
+    }
+]
