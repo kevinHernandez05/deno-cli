@@ -70,6 +70,8 @@ Muestra un menú de los comandos usados por el CLI.
 
 ¡Todos los aportes son bienvenidos, comenzando por los Pull Requests! 🙌
 
+Puedes ver el avance del proyecto desde este enlace: https://trello.com/b/zGhht4tJ/deno-cli
+
 ## Licencia
 
 MIT
